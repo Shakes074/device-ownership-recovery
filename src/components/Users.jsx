@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { userProfiles } from '../data/userProfiles.js';
 
 const Users = () => {
@@ -11,7 +12,7 @@ const Users = () => {
       </p>
       <div className="user-grid">
         {userProfiles.map((profile) => (
-          <article key={profile.role} className={`user-card user-card--${profile.accent}`}>
+          <article key={profile.key} className={`user-card user-card--${profile.accent}`}>
             <h3>{profile.role}</h3>
             <p>{profile.summary}</p>
             <ul>
@@ -19,6 +20,9 @@ const Users = () => {
                 <li key={action}>{action}</li>
               ))}
             </ul>
+            <Link className="user-card__cta" to={profile.path}>
+              Visit portal →
+            </Link>
           </article>
         ))}
       </div>
