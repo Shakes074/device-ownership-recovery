@@ -20,9 +20,15 @@ const Users = () => {
                 <li key={action}>{action}</li>
               ))}
             </ul>
-            <Link className="user-card__cta" to={profile.path}>
-              Visit portal →
-            </Link>
+            {profile.marketingCta?.disabled ? (
+              <span className="user-card__cta user-card__cta--disabled">
+                {profile.marketingCta.label}
+              </span>
+            ) : (
+              <Link className="user-card__cta" to={profile.marketingCta?.href ?? profile.path}>
+                {profile.marketingCta?.label ?? 'Learn more'} →
+              </Link>
+            )}
           </article>
         ))}
       </div>

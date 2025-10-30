@@ -6,6 +6,7 @@ import Users from './components/Users.jsx';
 import Contact from './components/Contact.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import RoleLayout from './components/RoleLayout.jsx';
 import { userRoutes } from './users/routes.js';
 import './styles/app.css';
 
@@ -48,8 +49,17 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      {userRoutes.map(({ key, path, Component }) => (
-        <Route key={key} path={path} element={<Component />} />
+      {userRoutes.map(({ key, basePath, routes }) => (
+        <Route key={key} path={`${basePath}/*`} element={<RoleLayout roleKey={key} />}>
+          {routes.map(({ path, Component }) =>
+            path ? (
+              <Route key={path || 'index'} path={path} element={<Component />} />
+            ) : (
+              <Route key="index" index element={<Component />} />
+            )
+          )}
+          <Route path="*" element={<Navigate to={basePath} replace />} />
+        </Route>
       ))}
       <Route path="/store" element={<Navigate to="/store/admin" replace />} />
       <Route path="*" element={<NotFoundPage />} />
