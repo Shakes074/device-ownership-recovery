@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import { roleConfigs } from '../users/config.js';
 
 const RoleLayout = ({ roleKey }) => {
   const role = roleConfigs[roleKey];
+  const location = useLocation();
 
   if (!role) {
     return (
@@ -40,7 +41,13 @@ const RoleLayout = ({ roleKey }) => {
           : undefined
       }
     >
-      <Header navLinks={role.navLinks} />
+      <Header
+        navLinks={
+          location.pathname.startsWith(`${role.path}/dashboard`) && role.dashboardNavLinks
+            ? role.dashboardNavLinks
+            : role.navLinks
+        }
+      />
       <main className="role-shell__content">
         <section className="role-hero">
           <div className="role-hero__copy">

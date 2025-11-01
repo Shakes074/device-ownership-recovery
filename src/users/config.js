@@ -27,6 +27,13 @@ export const roleConfigs = {
       { label: 'Login', to: '/device-owner/login', variant: 'ghost' },
       { label: 'Register', to: '/device-owner/register', variant: 'primary' }
     ],
+    dashboardNavLinks: [
+      { label: 'My Devices', href: '#my-devices', variant: 'link' },
+      { label: 'Children', href: '#children', variant: 'link' },
+      { label: 'Profile', href: '#profile', variant: 'link' },
+      { label: 'Archived', href: '#archived', variant: 'link' },
+      { label: 'Log Out', href: '#logout', variant: 'ghost' }
+    ],
     theme: {
       background: '#f0f6ff',
       surface: '#ffffff',

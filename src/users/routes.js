@@ -4,11 +4,12 @@ import {
   RoleAboutPage,
   RoleUsersPage,
   RoleContactPage,
-  RoleLoginPage,
-  RoleRegisterPage,
   RoleRequestPage,
   RoleAccessPage
 } from '../components/RolePages.jsx';
+import DeviceOwnerLogin from './device-owner/Login.jsx';
+import DeviceOwnerRegister from './device-owner/Register.jsx';
+import DeviceOwnerDashboard from './device-owner/Dashboard.jsx';
 
 export const userRoutes = [
   {
@@ -20,8 +21,9 @@ export const userRoutes = [
       { path: 'about', Component: RoleAboutPage },
       { path: 'users', Component: RoleUsersPage },
       { path: 'contact', Component: RoleContactPage },
-      { path: 'login', Component: RoleLoginPage },
-      { path: 'register', Component: RoleRegisterPage }
+      { path: 'dashboard', Component: DeviceOwnerDashboard },
+      { path: 'login', Component: DeviceOwnerLogin },
+      { path: 'register', Component: DeviceOwnerRegister }
     ]
   },
   {

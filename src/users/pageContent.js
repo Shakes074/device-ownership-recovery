@@ -144,6 +144,67 @@ export const rolePageContent = {
         }
       ]
     },
+    dashboard: {
+      intro:
+        'This at-a-glance view highlights open incidents, documents needing attention, and the people collaborating with you today.',
+      sections: [
+        {
+          id: 'my-devices',
+          title: 'My Devices',
+          body:
+            'Track every registered device, spot pending actions, and jump into detailed timelines with a single click.',
+          items: [
+            'Device cards display status, warranty coverage, and outstanding verification tasks',
+            'Filter by travel mode, incident state, or ownership handovers',
+            'Pin priority hardware to the top of the list for faster follow-up'
+          ]
+        },
+        {
+          id: 'children',
+          title: 'Children & Delegates',
+          body:
+            'Manage the people you trust to act on your behalf—from family members to assistants—with guided permissions.',
+          items: [
+            'Add dependants or delegates and define exactly which devices they can manage',
+            'Set notification preferences per delegate to avoid noisy inboxes',
+            'Review activity logs that show who made changes and when'
+          ]
+        },
+        {
+          id: 'profile',
+          title: 'Profile & Security',
+          body:
+            'Keep contact details, recovery questions, and authentication methods up to date to avoid delays during incidents.',
+          items: [
+            'Update phone numbers, backup emails, and emergency contacts in one place',
+            'Enable passkeys or authenticator apps for stronger sign-in security',
+            'Download a data summary for personal records or compliance requests'
+          ]
+        },
+        {
+          id: 'archived',
+          title: 'Archived Devices',
+          body:
+            'Reference the history of resolved incidents or decommissioned hardware when you need an auditable trail.',
+          items: [
+            'Browse a read-only list of previously recovered or transferred devices',
+            'Export closure summaries for insurance, travel, or legal follow-up',
+            'Restore archived records if a device resurfaces or requires further action'
+          ]
+        },
+        {
+          id: 'logout',
+          title: 'Log Out',
+          body:
+            'Ready to wrap up your session? Log out securely and pick up exactly where you left off next time.',
+          items: [
+            'Sessions end across all browsers to protect your account',
+            'Recent activity snapshots help you resume in seconds when you return',
+            'Need to switch accounts? Use log out to return to the main sign-in screen'
+          ]
+        }
+      ]
+    },
     login: {
       intro:
         'Access your secure workspace to manage registered devices, submit incidents, and respond to partner updates.',
