@@ -1,0 +1,113 @@
+.affidavit-uploader {
+  width: 100%;
+}
+
+.affidavit-uploader__dropzone {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--background-secondary);
+}
+
+.affidavit-uploader__dropzone:hover,
+.affidavit-uploader__dropzone:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.affidavit-uploader__dropzone--dragging {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color-light);
+}
+
+.affidavit-uploader__dropzone--error {
+  border-color: var(--error-color);
+}
+
+.affidavit-uploader__input {
+  display: none;
+}
+
+.affidavit-uploader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.affidavit-uploader__icon {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.affidavit-uploader__text {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.affidavit-uploader__hint {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.affidavit-uploader__file {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: var(--background-primary);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.affidavit-uploader__file-icon {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
+
+.affidavit-uploader__file-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.affidavit-uploader__filename {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.affidavit-uploader__filesize {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.affidavit-uploader__change {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.affidavit-uploader__change:hover {
+  text-decoration: underline;
+}
+
+.affidavit-uploader__error {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin: 0.5rem 0 0;
+}

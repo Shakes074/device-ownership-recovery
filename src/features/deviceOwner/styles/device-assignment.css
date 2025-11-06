@@ -1,0 +1,114 @@
+.device-assignment {
+  width: 100%;
+}
+
+.device-assignment__fieldset {
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.device-assignment__legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.device-assignment__options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.device-assignment__option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.device-assignment__option-label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.device-assignment__no-children {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.device-assignment__add-child,
+.device-assignment__add-child-small,
+.device-assignment__add-form-button,
+.device-assignment__assign-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.device-assignment__add-child-small {
+  background: none;
+  color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.device-assignment__add-child-small:hover {
+  text-decoration: underline;
+}
+
+.device-assignment__hint {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.device-assignment__children-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.device-assignment__add-form {
+  margin-top: 0.75rem;
+}
+
+.device-assignment__label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.device-assignment__add-form-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.device-assignment__input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--background-secondary);
+}
+
+.device-assignment__error {
+  color: var(--error-color);
+  margin-top: 0.5rem;
+}
+
+.device-assignment__actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 640px) {
+  .device-assignment__add-form-row {
+    flex-direction: column;
+  }
+
+  .device-assignment__actions {
+    justify-content: stretch;
+  }
+}

@@ -1,0 +1,132 @@
+.police-station-autocomplete {
+  width: 100%;
+}
+
+.police-station-autocomplete__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.police-station-autocomplete__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.police-station-autocomplete__input {
+  width: 100%;
+  padding: 0.75rem;
+  padding-right: 2.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--background-secondary);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.police-station-autocomplete__input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-color-light);
+}
+
+.police-station-autocomplete__input--error {
+  border-color: var(--error-color);
+}
+
+.police-station-autocomplete__input--error:focus {
+  box-shadow: 0 0 0 2px var(--error-color-light);
+}
+
+.police-station-autocomplete__clear {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  line-height: 1;
+  font-size: 1rem;
+}
+
+.police-station-autocomplete__clear:hover {
+  color: var(--text-primary);
+  background: var(--background-tertiary);
+}
+
+.police-station-autocomplete__listbox {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  max-height: 300px;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  list-style: none;
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow-y: auto;
+}
+
+.police-station-autocomplete__option {
+  padding: 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.police-station-autocomplete__option:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.police-station-autocomplete__option--highlighted {
+  background-color: var(--primary-color-light);
+}
+
+.police-station-autocomplete__station-name {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.police-station-autocomplete__station-details {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.police-station-autocomplete__station-phone {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.police-station-autocomplete__error {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .police-station-autocomplete__listbox {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    margin: 0;
+    bottom: 1rem;
+    max-height: 50vh;
+  }
+  
+  .police-station-autocomplete__option {
+    padding: 1rem;
+  }
+}
