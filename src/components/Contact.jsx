@@ -2,24 +2,30 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className="panel">
+      <section id="contact" className="section section--pattern">
+        <div className="panel">
       <h2>Contact us</h2>
-      <p>
-        Ready to bring Device Ownership Recovery to your organization? Reach out and our onboarding
-        team will schedule a walkthrough tailored to your workflows.
-      </p>
-      <div className="contact-details">
-        <div>
-          <strong>Email:</strong> <a href="mailto:hello@deviceownership.io">hello@deviceownership.io</a>
+      <div className="contact-grid">
+        <div className="contact-info">
+          <p>
+            Ready to bring Device Ownership Recovery to your organization? Reach out and our onboarding
+            team will schedule a walkthrough tailored to your workflows.
+          </p>
+          <div className="contact-details">
+            <div className="contact-details__item">
+              <strong>Email:</strong> 
+              <a href="mailto:hello@deviceownership.io">hello@deviceownership.io</a>
+            </div>
+            <div className="contact-details__item">
+              <strong>Phone:</strong> 
+              <a href="tel:+18885551212">+1 (888) 555-1212</a>
+            </div>
+            <div className="contact-details__item">
+              <strong>Office hours:</strong> Monday–Friday, 9am–6pm PT
+            </div>
+          </div>
         </div>
-        <div>
-          <strong>Phone:</strong> <a href="tel:+18885551212">+1 (888) 555-1212</a>
-        </div>
-        <div>
-          <strong>Office hours:</strong> Monday–Friday, 9am–6pm PT
-        </div>
-      </div>
-      <form className="contact-form">
+        <form className="contact-form">
         <div className="contact-form__row">
           <label htmlFor="name">Name</label>
           <input id="name" type="text" name="name" placeholder="Your full name" />
@@ -59,7 +65,9 @@ const Contact = () => {
           Submit inquiry
         </button>
       </form>
-    </div>
+        </div>
+      </div>
+      </section>
   );
 };
 
